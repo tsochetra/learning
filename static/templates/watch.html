@@ -1,0 +1,127 @@
+
+    <link href="/css/portfolio-item.css" rel="stylesheet">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">TSOCHETRA</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+          
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" id="fade">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{lesson}} : 
+                    <small>{{title}}</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row" id="fade">
+
+            <div class="col-md-7">
+                <iframe class="player" width="100%" height="100%" class="img-responsive" ng-src="{{url | Trust}}" frameborder="0" allowfullscreen="1"></iframe>
+            </div>
+            
+            <div class="col-md-5">
+                <h3>មេរៀន</h3>
+                <ul style="list-style-type:none" id="ul">
+                   <li ng-repeat="nav in navdata">
+                       <a href="/{{lesson}}/lesson/{{$index + 1}}">{{nav}}</a>
+                   </li>
+                </ul>
+            
+                <h3>លំហាត់</h3>
+                <ul style="list-style-type:none">
+                    <li ng-repeat="nav in navdata1">
+                        <a href="/{{lesson}}/exercise/{{$index + 1}}">{{nav}}</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h4 class="page-header">We've built this project using :</h4>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="https://nodejs.org/en/">
+                    <img class="img-responsive portfolio-item" src="/img/node.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="http://expressjs.com/">
+                    <img class="img-responsive portfolio-item" src="/img/express.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="http://www.ubuntu.com/">
+                    <img class="img-responsive portfolio-item" src="/img/ubuntu.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="https://www.mysql.com/">
+                    <img class="img-responsive portfolio-item" src="/img/mysql.png" alt="">
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p></p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	var url = location.href;
+    	var split = url.split("/");
+    	var num = split.pop();
+    	var type = split[split.length - 1];
+    	if (type == "lesson") {
+    		$(".lesson"+num+"").css({
+    			"color": "red"
+    		});
+    	} else {
+    		$(".exercise"+num+"").css({
+    			"color": "red"
+    		});
+    	}
+
+
+
+    </script>
