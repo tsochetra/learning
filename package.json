@@ -1,0 +1,18 @@
+{
+  "name": "tsochetra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "Tra",
+  "license": "MIT",
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*", 
+    "http": "*",
+    "mysql": "*"
+  }
+}
